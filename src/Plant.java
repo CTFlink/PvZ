@@ -1,9 +1,15 @@
 public class Plant {
 
-    short life = 100;
-    short attack = 10;
+    public int life = 100;
+    public int attack = (int) (Math.random()*10) %3 +7;
 
-    public Plant(){
+
+    public void attack(Zombie z){
+        z.takeDamage(attack);
+    }
+    public void takeDamage(int d){
+        life = life-d;
 
     }
+
 }
