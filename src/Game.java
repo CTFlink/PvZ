@@ -1,9 +1,13 @@
 public class Game {
 
     public Game(){
+
     }
 
     public static void start(){
+
+        ConeheadZombie ib = new ConeheadZombie(100,25);
+
 
         double plantType = Math.random();
         Plant bo;
@@ -20,7 +24,7 @@ public class Game {
 
         }
 
-        Zombie ib = new Zombie();
+
 
 
         while (bo.getToughness()>0 && ib.getLife()>0 ){
