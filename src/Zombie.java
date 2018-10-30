@@ -1,8 +1,14 @@
 public class Zombie {
 
-    private int life = 100;
-    private int attack = (int) (Math.random() * 10) % 3 + 7;
+    private int life;
+    private int attack ;
     private String status = "";
+
+    public Zombie(int life,int attack){
+        this.life=life;
+        this.attack=attack;
+
+    }
 
     public void attack(Plant p) {
         p.takeDamage(attack);
