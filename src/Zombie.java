@@ -3,10 +3,12 @@ public class Zombie {
     private int life;
     private int attack ;
     private String status = "";
+    private Boolean blocked;
 
     public Zombie(int life,int attack){
         this.life=life;
         this.attack=attack;
+        this.blocked = false;
 
     }
 
@@ -41,5 +43,13 @@ public class Zombie {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Boolean getBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(Boolean blocked) {
+        this.blocked = blocked;
     }
 }

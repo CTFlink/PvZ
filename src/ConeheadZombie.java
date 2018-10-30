@@ -1,17 +1,23 @@
 public class ConeheadZombie extends Zombie {
 
-    public ConeheadZombie(int life, int attack){
-        super(life,attack);
+
+
+    public ConeheadZombie(){
+        super(200,25);
 
     }
 
 
-
-    public void block(int d){
+    @Override
+    public void takeDamage(int d){
+        setBlocked(false);
         //10% chance to block
         if(Math.random() < 0.9){
-            this.takeDamage(d);
+            setLife(getLife()-d);
+        }else{
+            setBlocked(true);
         }
     }
+
 
 }

@@ -1,8 +1,9 @@
 public class FlagZombie extends Zombie{
 
 
-    public FlagZombie(int life, int attack){
-        super(life,attack);
+    public FlagZombie(){
+        super(100,50);
+
 
     }
 
