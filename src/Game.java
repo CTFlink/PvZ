@@ -4,16 +4,31 @@ public class Game {
     }
 
     public static void start(){
-        Plant bo = new Plant();
+
+        double plantType = Math.random();
+        Plant bo;
+
+
+        if(plantType <0.3){
+            bo = new PeaShoter();
+
+        }else if(plantType <0.6){
+            bo = new Repeater();
+        }else{
+
+            bo = new SnowPea();
+
+        }
+
         Zombie ib = new Zombie();
 
 
-        while (bo.life>0 && ib.life>0 ){
+        while (bo.getToughness()>0 && ib.getLife()>0 ){
 
             bo.attack(ib);
             ib.attack(bo);
 
-            System.out.println("Bo's liv er " + bo.life + " og Ib's liv er " + ib.life);
+            System.out.println("Bo's liv er " + bo.getToughness() + " og Ib's liv er " + ib.getLife());
         }
     }
 }
