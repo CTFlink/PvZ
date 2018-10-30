@@ -4,7 +4,7 @@ public class Game {
 
     }
 
-    public static void start(){
+    public void start(){
 
         ConeheadZombie ib = new ConeheadZombie(100,25);
 
@@ -13,10 +13,10 @@ public class Game {
         Plant bo;
 
 
-        if(plantType <0.3){
+        if(plantType <0.333){
             bo = new PeaShoter();
 
-        }else if(plantType <0.6){
+        }else if(plantType <0.666){
             bo = new Repeater();
         }else{
 
@@ -25,6 +25,8 @@ public class Game {
         }
 
 
+
+        System.out.println("bo is " +bo.getClass().toString());
 
 
         while (bo.getToughness()>0 && ib.getLife()>0 ){
