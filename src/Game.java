@@ -3,16 +3,16 @@ public class Game {
     public Game(){
     }
 
-    public static void start(){
+    public void start(){
 
         double plantType = Math.random();
         Plant bo;
 
 
-        if(plantType <0.3){
+        if(plantType <0.333){
             bo = new PeaShoter();
 
-        }else if(plantType <0.6){
+        }else if(plantType <0.666){
             bo = new Repeater();
         }else{
 
@@ -21,6 +21,8 @@ public class Game {
         }
 
         Zombie ib = new Zombie();
+
+        System.out.println("bo is " +bo.getClass().toString());
 
 
         while (bo.getToughness()>0 && ib.getLife()>0 ){

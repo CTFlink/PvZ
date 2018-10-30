@@ -1,11 +1,12 @@
 public interface Plant {
 
-    public int getToughness();
-    public int getDps();
+    int getToughness();
 
+    int getDps();
 
-    public void attack(Zombie z);
-    public void takeDamage(int d);
+    void attack(Zombie z);
+
+    void takeDamage(int d);
 
 
 }

@@ -1,7 +1,7 @@
 public class Repeater implements Plant {
 
-    int dps = 20;
-    int toughness = 300;
+    private int dps = 20;
+    private int toughness = 300;
 
     public Repeater() {
     }
