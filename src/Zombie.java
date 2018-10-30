@@ -1,13 +1,23 @@
 public class Zombie {
 
-    int life = 100;
-    int attack = (int) (Math.random()*10) %3 +7;
+    public int life;
+    public int attack;
+
+    public Zombie(int life, int attack){
+
+        this.life = life;
+        this.attack=attack;
+
+    }
+
+
 
     public void attack(Plant p){
+
         p.takeDamage(attack);
     }
     public void takeDamage(int d){
-        life = life-d;
+        life -= d;
 
     }
 }

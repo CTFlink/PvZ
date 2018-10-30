@@ -1,11 +1,12 @@
 public class Game {
 
     public Game(){
+
     }
 
     public static void start(){
         Plant bo = new Plant();
-        Zombie ib = new Zombie();
+        ConeheadZombie ib = new ConeheadZombie(100,25);
 
 
         while (bo.life>0 && ib.life>0 ){
